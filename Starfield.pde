@@ -1,10 +1,10 @@
-Particle[] ketchUp;
+Particle[] mayo;
 
 void setup() {
   size(800, 800);
-  ketchUp = new Particle[500];
-  for(int i = 0; i < ketchUp.length; i++) {
-    ketchUp[i] = new Particle();
+  mayo = new Particle[500];
+  for(int i = 0; i < mayo.length; i++) {
+    mayo[i] = new Particle();
   }
 }
 
@@ -12,8 +12,8 @@ void setup() {
 void draw() {
     background(255, 255, 255, 200);
     for(int i = 0; i < ketchUp.length; i++) {
-    ketchUp[i].move();
-    ketchUp[i].show();
+    mayo[i].move();
+    mayo[i].show();
    }
 }
 
