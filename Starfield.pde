@@ -13,7 +13,7 @@ void setup() {
 
 
 void draw() {
-    background(0, 0, 0);
+    background(255, 255, 255);
     for(int i = 0; i < mayo.length; i++) {
     mayo[i].move();
     mayo[i].show();
