@@ -25,7 +25,8 @@ class Particle {
   double X, Y, A, S;
   int C;
   Particle() {
-    X = Y = 400;
+    X = 400;
+    Y = 400;
     A = (Math.random()*Math.PI*2);
     S = (Math.random()*10+1);
     C = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
@@ -43,7 +44,8 @@ class Particle {
 class OddballParticle extends Particle {//inherits from Particle
   OddballParticle() {
   //your code here
-    X = Y = 400;
+    X = 400;
+    Y = 400;
     A = Math.PI;
     S = 0.1
     C = color(0, 0, 0);
