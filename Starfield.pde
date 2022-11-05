@@ -1,16 +1,11 @@
 //your code here
 Particle[] mayo;
-OddballParticle[] ranch;
 
 void setup()
 {
   //your code here
   size(800, 800);
   mayo = new Particle[100];
-  ranch = new OddBallParticle;
-  for(int i = 0; i < 10; i++){
-    mayo[i] = new OddballParticle();
-  }
   for(int i = 0; i < mayo.length; i++){
      mayo[i] = new Particle();
   }
@@ -44,22 +39,4 @@ class Particle
     fill(myC);
     line((float)myX, (float)myY, 10, 10);
   }
-}
-
-class OddballParticle extends Particle //inherits from Particle
-{
-  //your code here
-   OddballParticle(){
-      myX = myY = 400;
-      myA = Math.PI;
-      myS = Math.random()*10+1;
-      myC = color(0, 0, 0);
-   }
-   void move(){
-       myX = myX + (Math.cos(myA)*myS);
-       myY = myY + (Math.sin(myA)*myS);
-   }
-   void show(){
-      rect((float)myX, (float)myY, 50, 50);
-   }
 }
