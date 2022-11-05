@@ -45,7 +45,7 @@ class OddballParticle extends Particle {//inherits from Particle
   //your code here
     X = Y = 400;
     A = Math.PI;
-    S = (Math.random()*10+1);
+    S = 0.1
     C = color(0, 0, 0);
   }
 }
