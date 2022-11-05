@@ -37,7 +37,7 @@ class Particle {
   }
   void show() {
     fill(C);
-    ellipse((float)X, (float)Y, 10, 10);
+    line((float)X, (float)Y, 10, 10);
   }
 }
 
