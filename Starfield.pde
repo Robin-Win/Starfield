@@ -1,42 +1,39 @@
-//your code here
-Particle[] mayo;
+Particle[] ketchUp;
 
-void setup()
-{
-  //your code here
+void setup() {
   size(800, 800);
-  mayo = new Particle[100];
-  for(int i = 0; i < mayo.length; i++){
-     mayo[i] = new Particle();
+  ketchUp = new Particle[500];
+  for(int i = 0; i < ketchUp.length; i++) {
+    ketchUp[i] = new Particle();
   }
 }
 
-void draw()
-{
-  //your code here
-  background(0, 0, 0);
-  for(int i = 0; i < mayo.length; i++){
-  mayo[i].show();
-  mayo[i].move();
-  }
+
+void draw() {
+    background(255, 255, 255, 200);
+    for(int i = 0; i < ketchUp.length; i++) {
+    ketchUp[i].move();
+    ketchUp[i].show();
+   }
 }
-class Particle
-{
-  //your code here
-  double myX, myY, myS, myA;
-  int myC;
-  Particle(){
-    myX = myY = 400;
-    myA = Math.random()*(2*Math.PI);
-    myS = Math.random()*10+1;
-    myC = color((int)(Math.random()*256),(int)(Math.random()*256), (int)(Math.random()*256));
+
+
+class Particle {
+  double X, Y, A, S;
+  int C;
+  Particle() {
+    X = 400;
+    Y = 400;
+    A = (Math.random()*Math.PI*2);
+    S = (Math.random()*10+1);
+    C = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+  } 
+  void move() {
+    X = X + (Math.cos(A) * S);
+    Y = Y + (Math.sin(A) * S);
   }
-  void move(){
-    myX = myX + (Math.cos(myA)*myS);
-    myY = myY + (Math.sin(myA)*myS);
-  }
-  void show(){
-    fill(myC);
-    line((float)myX, (float)myY, 10, 10);
+  void show() {
+    fill(C);
+    ellipse((float)X, (float)Y, 10, 10);
   }
 }
