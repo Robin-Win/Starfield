@@ -3,10 +3,10 @@ Particle[] mayo;
 void setup() {
   size(800, 800);
   mayo = new Particle[500];
-  for(int i = 1; i < mayo.length; i++) {
+  for(int i = 11; i < mayo.length; i++) {
     mayo[i] = new Particle();
   }
-  for(int i = 0; i < 1; i++) {
+  for(int i = 10; i < 11; i++) {
     mayo[i] = new OddballParticle();
   }
 }
@@ -47,5 +47,13 @@ class OddballParticle extends Particle {//inherits from Particle
     A = Math.PI;
     S = (Math.random()*10+1);
     C = color(0, 0, 0);
+  }
+  void move() {
+    X = X + (Math.cos(A) * S);
+    Y = Y + (Math.sin(A) * S);
+  }
+  void show() {
+    fill(C);
+    rect((float)X, (float)Y, 10, 10);
   }
 }
