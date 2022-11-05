@@ -10,7 +10,7 @@ void setup() {
 
 
 void draw() {
-    background(255, 255, 255, 200);
+    background(0, 0, 0, 200);
     for(int i = 0; i < ketchUp.length; i++) {
     mayo[i].move();
     mayo[i].show();
