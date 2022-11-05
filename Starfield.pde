@@ -48,12 +48,4 @@ class OddballParticle extends Particle {//inherits from Particle
     S = (Math.random()*10+1);
     C = color(0, 0, 0);
   }
-  void move() {
-    X = X + (Math.cos(A) * S);
-    Y = Y + (Math.sin(A) * S);
-  }
-  void show() {
-    fill(C);
-    rect((float)X, (float)Y, 10, 10);
-  }
 }
