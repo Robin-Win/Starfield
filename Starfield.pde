@@ -1,3 +1,20 @@
+//your code here
+Particle[] mayo;
+OddballParticle[] ranch;
+
+void setup()
+{
+  //your code here
+  size(800, 800);
+  mayo = new Particle[100];
+  ranch = new OddBallParticle;
+  for(int i = 0; i < 10; i++){
+    mayo[i] = new OddballParticle();
+  }
+  for(int i = 0; i < mayo.length; i++){
+     mayo[i] = new Particle();
+  }
+}
 
 void draw()
 {
@@ -46,4 +63,3 @@ class OddballParticle extends Particle //inherits from Particle
       rect((float)myX, (float)myY, 50, 50);
    }
 }
-
