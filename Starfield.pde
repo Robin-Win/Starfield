@@ -3,11 +3,11 @@ Particle[] mayo;
 void setup() {
   size(800, 800);
   mayo = new Particle[500];
-  for(int i = 11; i < mayo.length; i++) {
-    mayo[i] = new Particle();
-  }
-  for(int i = 10; i < 11; i++) {
+  for(int i = 0; i < 100; i++) {
     mayo[i] = new OddballParticle();
+  }
+  for(int i = 100; i < mayo.length; i++) {
+    mayo[i] = new Particle();
   }
 }
 
